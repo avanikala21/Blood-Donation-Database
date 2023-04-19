@@ -1,37 +1,25 @@
 Database Management and Database Design – DAMG 6210
-**Topic: Blood Donation and Requirement System**
-Professor: Prof. Nicholas Brown
+
+Topic: Blood Donation and Requirement System 
+Professor: Prof. Nicholas Brown 
 Team Members: Dhruvi Bavaria (002767470), Avani Kala (002772623)
- 
-1. Steps we followed for project:
 
-1.	Created an initial ER diagram of dataset we were aiming for.
+1.	Steps we followed for project:
+•	Created an initial ER diagram of the dataset we were aiming for.
+•	Searched for datasets for Blood-banks, Hospitals and Persons with blood type initially, as they are our primary tables containing solid information.
+•	Other tables had link of this table and we generated data for tables of donor, patient, requests, pre-exam and blood bags using random function.
+•	We cleaned the data that we scrapped and ran python script which creates table and inserts data from csv files.
+•	Data was reflected in our database, and we linked the foreign keys by altering the table and adding constraints. Created use cases and views.
+•	Implemented Normalization up to 3NF form and updated the python script to store the data in table as per new design of tables after normalization.
 
-2.	Searched for datasets for Blood-banks, Hospitals and Persons with blood type initially, as they are our primary tables containing solid information.
-
-3.	Other tables had link of this table and we generated data for tables of donor, patient, requests, pre-exam and bloodbags using random function.
-
-4.	We cleaned the data that we scrapped
-
-5.	We ran python query which creates table and inserts data from csv files.
-
-6.	Data was reflected in our database, and we linked the foreign keys by altering the table and adding constraints.
-
-7.	Creates use cases and views.
-
-8.	Implemented Normalization upto 3NF form and updated the python script to store the data in table as per new design of tables after normalization.
-
-2. Project Description:
+2.	Project Description: 
 The aim of developing the ‘Blood Donation and Requirement System’ database is to:
-•	Keep track of donors, patients and quantity of blood type in blood banks. 
-•	Hospitals and individual to keep track of their blood requests and in case of emergency they can contact respective blood banks to check the availability.
-•	Blood banks can check the eligibility of person if they can donate the blood or not.
-	
+Keep track of donors, patients and quantity of blood type in blood banks. 
+• Hospitals and individual to keep track of their blood requests and in case of      emergency they can contact respective blood banks to check the availability. 
+• Blood banks can check the eligibility of person if they can donate the blood or not.
 
-3. ER Diagram:
+3.	ER Diagram:
 ![image](https://user-images.githubusercontent.com/113712334/233174968-7ccc0a42-99b3-4167-876a-d568feb305a3.png)
-
-
 
 4.	Use cases and views:
 Case 1: Hospital wants to request A+ blood from all blood-banks that have it.
