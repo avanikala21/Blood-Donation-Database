@@ -4,7 +4,7 @@
 1.	Dhruvi Bavaria (002767470)
 2.	Avani Kala (002772623)
 
-The aim of developing the ‘Blood Donation and Requirement System’ database is to keep a track of acceptors and donors in blood banks. This database will be useful to person who is in requirement of blood. Hospitals will also be able to take advantage of this database in case of blood need and contact respective blood banks. Hospitals will be able to request blood banks for blood requirements. 
+The aim of developing the ‘Blood Donation and Requirement System’ database is to collect data of acceptors and donors in blood banks. Extracted data from different sources and Normalized the tables to reduce redundancy. This database will be useful to person who is in requirement of blood. Hospitals will also be able to take advantage of this database in case of blood need and contact respective blood banks. Hospitals will be able to request blood banks for blood requirements. 
 
 **Initial Tables and their attributes:**
 
