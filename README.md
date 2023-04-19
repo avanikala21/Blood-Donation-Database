@@ -1,47 +1,50 @@
+Database Management and Database Design – DAMG 6210
 **Topic: Blood Donation and Requirement System**
+Professor: Prof. Nicholas Brown
+Team Members: Dhruvi Bavaria (002767470), Avani Kala (002772623)
+ 
+1. Steps we followed for project:
 
-**Team members:**
-1.	Dhruvi Bavaria (002767470)
-2.	Avani Kala (002772623)
+1.	Created an initial ER diagram of dataset we were aiming for.
 
-The aim of developing the ‘Blood Donation and Requirement System’ database is to collect data of acceptors and donors in blood banks. Extracted data from different sources and Normalized the tables to reduce redundancy. This database will be useful to person who is in requirement of blood. Hospitals will also be able to take advantage of this database in case of blood need and contact respective blood banks. Hospitals will be able to request blood banks for blood requirements. 
+2.	Searched for datasets for Blood-banks, Hospitals and Persons with blood type initially, as they are our primary tables containing solid information.
 
-**Initial Tables and their attributes:**
+3.	Other tables had link of this table and we generated data for tables of donor, patient, requests, pre-exam and bloodbags using random function.
 
-•	Person: Person_id, firstname, lastname, address, zipcode, contact
+4.	We cleaned the data that we scrapped
 
-•	Donors: donor_id, pid, blood_type, weight, height, gender, Eligibility, DonationDate, AmountDonated, BloodBankID
+5.	We ran python query which creates table and inserts data from csv files.
 
-•	Patients: patient_id, pid, blood_type, Weight, Height, Transfusion Date, BloodBankID
+6.	Data was reflected in our database, and we linked the foreign keys by altering the table and adding constraints.
 
-•	Pre-Exam: Peid, pid, hemoglobin, bloodPressure, pulseRate
+7.	Creates use cases and views.
 
-•	BloodBank: BloodBank_id, Name, Address, Contact, Email, operating_hours
+8.	Implemented Normalization upto 3NF form and updated the python script to store the data in table as per new design of tables after normalization.
 
-•	BloodBags: BBID, blood_bank_id , BloodType, Quantity
+2. Project Description:
+The aim of developing the ‘Blood Donation and Requirement System’ database is to:
+•	Keep track of donors, patients and quantity of blood type in blood banks. 
+•	Hospitals and individual to keep track of their blood requests and in case of emergency they can contact respective blood banks to check the availability.
+•	Blood banks can check the eligibility of person if they can donate the blood or not.
+	
 
-•	Hospital : HospitalID, Name, Address, City, Zipcode, Contact.
+3. ER Diagram:
+![image](https://user-images.githubusercontent.com/113712334/233174968-7ccc0a42-99b3-4167-876a-d568feb305a3.png)
 
-•	Requests: RequestID, HospitalID, BloodBank_id, RequestedDate, Priority, RequestedBloodBag, RequestStatus.
 
 
-**Explanation of Tables:**
+4.	Use cases and views:
+Case 1: Hospital wants to request A+ blood from all blood-banks that have it.
+![image](https://user-images.githubusercontent.com/113712334/233175659-27a4aecd-8430-4eee-a528-d8342eb8f7af.png)
 
-The Person table contains all the people and their information. Two categories include: Donor, Patient. 
+Case 2:  'Callahan Eye Hospital' wants to check its blood request status
+![image](https://user-images.githubusercontent.com/113712334/233175731-eab1985c-b9b9-4219-b5ee-10091a58d198.png)
 
-The Donor table contains the information required to be a donor. 
+Case 3: Doctor wants to know pre-exam status of a particular person
+![image](https://user-images.githubusercontent.com/113712334/233175778-35f208f1-7999-47af-bbf3-2512be0e2f8c.png)
 
-The Patient table contains all the patients and their information required before a blood transfusion. 
+Case 4: Blood-Bank wants to know if there is any person who is a donor as well as patient.
+![image](https://user-images.githubusercontent.com/113712334/233175816-a1d521af-824a-47f7-8ee7-9549320e1a65.png)
 
-The Pre_exam table contains the respective information about a donor before a donation, as well as a patient before a transfusion. 
-
-The BloodBanks table contains information of Blood banks location and it’s other information. 
-
-The BloodBags table contains information regarding availability of blood at particular Blood Bank.
-
-The Hospital table contains information regarding all hospitals in Massachusetts. 
-
-The Request table contains information of hospital requests made to blood bank for blood requirements.
-
-**End users:** Person requiring blood, Person who wants to donate blood, hospitals.
-
+Case 5: What is quantity of O+ blood type at different banks
+![image](https://user-images.githubusercontent.com/113712334/233175873-e8870e03-0f25-4d92-8cd4-b08ed23abdce.png)
